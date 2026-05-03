@@ -386,11 +386,25 @@ function lbMove(dir) {
 slides.forEach((s, i) => {
   const img = s.querySelector('img');
   let startX = 0, startY = 0;
-  img.addEventListener('pointerdown', e => { startX = e.clientX; startY = e.clientY; });
-  img.addEventListener('pointerup', e => {
-    const dx = Math.abs(e.clientX - startX);
-    const dy = Math.abs(e.clientY - startY);
-    if (dx < 6 && dy < 6) openLb(i);
+
+  // 마우스 클릭 (PC)
+  img.addEventListener('mousedown', e => { startX = e.clientX; startY = e.clientY; });
+  img.addEventListener('mouseup', e => {
+    if (Math.abs(e.clientX - startX) < 6 && Math.abs(e.clientY - startY) < 6) openLb(i);
+  });
+
+  // 터치 (모바일)
+  img.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+  }, { passive: true });
+  img.addEventListener('touchend', e => {
+    const dx = Math.abs(e.changedTouches[0].clientX - startX);
+    const dy = Math.abs(e.changedTouches[0].clientY - startY);
+    if (dx < 10 && dy < 10) {
+      e.preventDefault();
+      openLb(i);
+    }
   });
 });
 
