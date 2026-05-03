@@ -8,89 +8,99 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #f9fafb; color: #1e2a3a; overflow-x: hidden; }
 
+  /* ANIMATION */
   .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.6s cubic-bezier(.22,.68,0,1.1), transform 0.6s cubic-bezier(.22,.68,0,1.1); }
   .fade-up.visible { opacity: 1; transform: translateY(0); }
 
+  /* NAV */
   nav { position: sticky; top: 0; z-index: 200; background: rgba(255,255,255,0.97); backdrop-filter: blur(10px); border-bottom: 1px solid #e8ecf2; padding: 14px 28px; display: flex; justify-content: space-between; align-items: center; }
   .nav-logo { font-size: 15px; font-weight: 500; color: #1e2a3a; }
   .nav-logo em { font-style: normal; color: #3d5a8a; }
   .nav-cta { background: #3d5a8a; color: #fff; font-size: 13px; font-weight: 500; padding: 8px 20px; border-radius: 999px; text-decoration: none; }
 
+  /* HERO */
   .hero { background: #f0f4f9; padding: 64px 24px 68px; text-align: center; }
   .hero-badge { display: inline-block; background: #dce6f4; color: #3d5a8a; font-size: 12px; font-weight: 500; padding: 5px 16px; border-radius: 999px; margin-bottom: 28px; letter-spacing: 0.05em; }
-  .hero-photo { width: 148px; height: 188px; object-fit: cover; object-position: top; border-radius: 74px 74px 20px 20px; margin: 0 auto 28px; display: block; box-shadow: 0 8px 32px rgba(61,90,138,0.13); border: 3px solid #fff; animation: heroFadeIn 0.9s cubic-bezier(.22,.68,0,1.1) both; }
-  @keyframes heroFadeIn { from { opacity:0; transform: translateY(20px); } to { opacity:1; transform: none; } }
-  .hero-text { animation: heroFadeIn 0.9s 0.15s cubic-bezier(.22,.68,0,1.1) both; }
+  .hero-photo { width: 148px; height: 188px; object-fit: cover; object-position: top; border-radius: 74px 74px 20px 20px; margin: 0 auto 28px; display: block; box-shadow: 0 8px 32px rgba(61,90,138,0.13); border: 3px solid #fff; animation: heroIn 0.9s cubic-bezier(.22,.68,0,1.1) both; }
+  .hero-text { animation: heroIn 0.9s 0.15s cubic-bezier(.22,.68,0,1.1) both; }
+  @keyframes heroIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
   .hero h1 { font-size: 26px; font-weight: 400; line-height: 1.65; color: #1e2a3a; margin-bottom: 14px; word-break: keep-all; }
   .hero h1 strong { font-weight: 600; color: #3d5a8a; }
   .hero-desc { font-size: 14px; color: #6b7a8d; line-height: 1.9; margin-bottom: 36px; word-break: keep-all; }
   .btn-kakao { display: inline-flex; align-items: center; gap: 8px; background: #3d5a8a; color: #fff; font-size: 14px; font-weight: 500; padding: 14px 34px; border-radius: 999px; text-decoration: none; }
 
+  /* SECTIONS */
   .section { padding: 60px 28px; max-width: 700px; margin: 0 auto; }
   .sec-label { font-size: 11px; font-weight: 600; color: #3d5a8a; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 10px; }
   .sec-title { font-size: 22px; font-weight: 500; color: #1e2a3a; margin-bottom: 18px; line-height: 1.45; word-break: keep-all; }
-  .sec-body { font-size: 15px; color: #5a6b80; line-height: 1.9; word-break: keep-all; }
+  .sec-body { font-size: 15px; color: #5a6b80; line-height: 1.9; word-break: keep-all; overflow-wrap: break-word; }
   .divider { height: 1px; background: #e8ecf2; margin: 0 28px; }
 
+  /* PROFILE */
   .profile-wrap { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 24px; }
   .profile-img { width: 296px; height: 376px; object-fit: cover; object-position: top; border-radius: 20px; box-shadow: 0 8px 32px rgba(61,90,138,0.13); }
 
+  /* STATS */
   .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 28px; }
-  .stat-card { background: #fff; border: 1px solid #e8ecf2; border-radius: 14px; padding: 20px 16px; text-align: center; box-shadow: 0 2px 8px rgba(61,90,138,0.04); }
+  .stat-card { background: #fff; border: 1px solid #e8ecf2; border-radius: 14px; padding: 20px 12px; text-align: center; box-shadow: 0 2px 8px rgba(61,90,138,0.04); }
   .stat-num { font-size: 15px; font-weight: 600; color: #3d5a8a; margin-bottom: 5px; line-height: 1.3; white-space: nowrap; }
-  .stat-label { font-size: 12px; color: #8a9ab0; line-height: 1.45; }
+  .stat-label { font-size: 12px; color: #8a9ab0; line-height: 1.45; word-break: keep-all; }
 
+  /* SERVICES */
   .services { display: flex; flex-direction: column; gap: 10px; margin-top: 24px; }
   .svc-row { display: flex; align-items: flex-start; gap: 14px; background: #fff; border: 1px solid #e8ecf2; border-radius: 14px; padding: 18px 20px; box-shadow: 0 2px 8px rgba(61,90,138,0.04); }
   .svc-icon { width: 32px; height: 32px; border-radius: 8px; background: #edf2f9; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 15px; }
-  .svc-title { font-size: 14px; font-weight: 500; color: #1e2a3a; margin-bottom: 3px; }
-  .svc-desc { font-size: 13px; color: #7a8da0; line-height: 1.6; }
+  .svc-title { font-size: 14px; font-weight: 500; color: #1e2a3a; margin-bottom: 3px; word-break: keep-all; }
+  .svc-desc { font-size: 13px; color: #7a8da0; line-height: 1.6; word-break: keep-all; overflow-wrap: break-word; }
 
-  .price-banner { background: #edf2f9; color: #3d5a8a; border-radius: 12px; padding: 13px 20px; text-align: center; font-size: 14px; font-weight: 500; margin-bottom: 18px; border: 1px solid #d0dff0; }
+  /* PRICING */
+  .price-banner { background: #edf2f9; color: #3d5a8a; border-radius: 12px; padding: 13px 20px; text-align: center; font-size: 14px; font-weight: 500; margin-bottom: 18px; border: 1px solid #d0dff0; word-break: keep-all; }
   .price-banner em { color: #2a4470; font-style: normal; font-weight: 600; }
   .price-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 8px rgba(61,90,138,0.04); }
   .price-table tr { border-bottom: 1px solid #e8ecf2; }
   .price-table tr:last-child { border-bottom: none; }
-  .price-table td { padding: 15px 20px; font-size: 14px; color: #1e2a3a; vertical-align: middle; }
+  .price-table td { padding: 15px 20px; font-size: 14px; color: #1e2a3a; vertical-align: middle; word-break: keep-all; }
   .price-table .region { font-weight: 500; color: #2e3f58; }
-  .price-table .final { color: #3d5a8a; font-size: 17px; font-weight: 600; text-align: right; }
-  .price-note { font-size: 12px; color: #9aaabb; margin-top: 14px; line-height: 1.75; }
+  .price-table .final { color: #3d5a8a; font-size: 17px; font-weight: 600; text-align: right; white-space: nowrap; }
+  .price-note { font-size: 12px; color: #9aaabb; margin-top: 14px; line-height: 1.75; word-break: keep-all; overflow-wrap: break-word; }
 
+  /* EVENT */
   .event-highlight { background: #edf2f9; border: 1px solid #d0dff0; border-radius: 14px; padding: 20px 24px; text-align: center; margin-bottom: 20px; }
   .event-highlight p { font-size: 13px; color: #7a8da0; margin-bottom: 4px; }
   .event-highlight strong { font-size: 22px; color: #3d5a8a; font-weight: 600; }
   .events { display: flex; flex-direction: column; gap: 10px; }
-  .event-row { display: flex; align-items: center; gap: 16px; background: #fff; border: 1px solid #e8ecf2; border-radius: 14px; padding: 18px 20px; box-shadow: 0 2px 8px rgba(61,90,138,0.04); }
+  .event-row { display: flex; align-items: center; gap: 12px; background: #fff; border: 1px solid #e8ecf2; border-radius: 14px; padding: 16px 18px; box-shadow: 0 2px 8px rgba(61,90,138,0.04); }
   .event-num { width: 32px; height: 32px; border-radius: 8px; background: #3d5a8a; color: #fff; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-  .event-name { font-size: 15px; font-weight: 500; color: #1e2a3a; margin-bottom: 3px; }
-  .event-desc { font-size: 12px; color: #8a9ab0; }
-  .event-discount { font-size: 20px; font-weight: 600; color: #3d5a8a; white-space: nowrap; text-align: right; }
+  .event-info { flex: 1; min-width: 0; }
+  .event-name { font-size: 14px; font-weight: 500; color: #1e2a3a; margin-bottom: 3px; word-break: keep-all; }
+  .event-desc { font-size: 12px; color: #8a9ab0; word-break: keep-all; overflow-wrap: break-word; }
+  .event-discount { font-size: 18px; font-weight: 600; color: #3d5a8a; white-space: nowrap; text-align: right; flex-shrink: 0; }
   .event-discount small { font-size: 11px; display: block; color: #8a9ab0; font-weight: 400; }
-  .event-note { font-size: 12px; color: #9aaabb; margin-top: 10px; }
+  .event-note { font-size: 12px; color: #9aaabb; margin-top: 10px; word-break: keep-all; }
 
   /* REVIEW SLIDER */
   .review-slider-wrap { overflow: hidden; margin-top: 24px; }
   .review-track { display: flex; gap: 10px; transition: transform 0.45s cubic-bezier(.4,0,.2,1); }
   .review-slide { flex: 0 0 calc(25% - 8px); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(61,90,138,0.10); }
-  .review-slide img { width: 100%; height: auto; display: block; cursor: zoom-in; }
+  .review-slide img { width: 100%; height: auto; display: block; cursor: zoom-in; -webkit-user-drag: none; user-select: none; }
   .review-nav { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 20px; }
   .review-nav button { width: 36px; height: 36px; border-radius: 50%; border: 1px solid #d0dff0; background: #fff; color: #3d5a8a; font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
   .review-nav button:hover { background: #edf2f9; }
   .review-dots { display: flex; gap: 6px; }
-  .review-dot { width: 7px; height: 7px; border-radius: 50%; background: #d0dff0; cursor: pointer; transition: background 0.2s, transform 0.2s; }
+  .review-dot { width: 7px; height: 7px; border-radius: 50%; background: #d0dff0; cursor: pointer; transition: background 0.2s, transform 0.2s; border: none; padding: 0; }
   .review-dot.active { background: #3d5a8a; transform: scale(1.3); }
 
   /* LIGHTBOX */
   .lightbox { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(5,10,20,0.93); align-items: center; justify-content: center; }
   .lightbox.open { display: flex; }
-  .lb-img-wrap { position: relative; display: flex; align-items: center; justify-content: center; max-width: 90vw; max-height: 90vh; }
-  .lightbox img { max-width: 88vw; max-height: 86vh; border-radius: 12px; object-fit: contain; display: block; box-shadow: 0 8px 60px rgba(0,0,0,0.6); }
-  .lb-close { position: fixed; top: 16px; right: 20px; color: #fff; font-size: 36px; cursor: pointer; line-height: 1; z-index: 10000; opacity: 0.85; background: none; border: none; }
+  .lightbox img { max-width: 88vw; max-height: 86vh; border-radius: 12px; object-fit: contain; display: block; box-shadow: 0 8px 60px rgba(0,0,0,0.6); pointer-events: none; }
+  .lb-close { position: fixed; top: 16px; right: 20px; color: #fff; font-size: 36px; cursor: pointer; z-index: 10000; opacity: 0.85; background: none; border: none; line-height: 1; }
   .lb-arrow { position: fixed; top: 50%; transform: translateY(-50%); color: #fff; font-size: 48px; cursor: pointer; opacity: 0.75; background: none; border: none; z-index: 10000; padding: 0 16px; line-height: 1; }
   .lb-arrow:hover { opacity: 1; }
   .lb-prev { left: 0; }
   .lb-next { right: 0; }
 
+  /* STEPS */
   .steps { display: flex; flex-direction: column; margin-top: 28px; }
   .step { display: flex; gap: 16px; align-items: flex-start; padding-bottom: 24px; }
   .step:last-child { padding-bottom: 0; }
@@ -98,12 +108,13 @@
   .step-num { width: 36px; height: 36px; border-radius: 50%; background: #3d5a8a; color: #fff; font-size: 14px; font-weight: 500; display: flex; align-items: center; justify-content: center; }
   .step-line { width: 2px; background: #dce6f4; flex: 1; min-height: 18px; margin-top: 4px; }
   .step:last-child .step-line { display: none; }
-  .step-title { font-size: 15px; font-weight: 500; color: #1e2a3a; margin-bottom: 3px; margin-top: 6px; }
-  .step-desc { font-size: 13px; color: #7a8da0; line-height: 1.65; }
+  .step-title { font-size: 15px; font-weight: 500; color: #1e2a3a; margin-bottom: 3px; margin-top: 6px; word-break: keep-all; }
+  .step-desc { font-size: 13px; color: #7a8da0; line-height: 1.65; word-break: keep-all; overflow-wrap: break-word; }
 
+  /* CONTACT */
   .contact-box { background: #3d5a8a; border-radius: 20px; padding: 44px 28px; text-align: center; margin-top: 24px; }
   .contact-box h3 { font-size: 20px; font-weight: 500; color: #fff; margin-bottom: 10px; }
-  .contact-box > p { font-size: 14px; color: rgba(255,255,255,0.65); margin-bottom: 28px; line-height: 1.75; }
+  .contact-box > p { font-size: 14px; color: rgba(255,255,255,0.65); margin-bottom: 28px; line-height: 1.75; word-break: keep-all; }
   .contact-kakao { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: #1e2a3a; font-size: 15px; font-weight: 600; padding: 14px 36px; border-radius: 999px; text-decoration: none; margin-bottom: 30px; }
   .contact-divider { font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 18px; line-height: 1.75; word-break: keep-all; }
   .sns-links { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
@@ -113,8 +124,9 @@
 
   @media (max-width: 480px) {
     .hero h1 { font-size: 22px; }
-    .profile-wrap { flex-direction: column; align-items: center; text-align: center; }
     .review-slide { flex: 0 0 calc(50% - 6px); }
+    .section { padding: 48px 20px; }
+    .profile-img { width: 240px; height: 305px; }
   }
 </style>
 </head>
@@ -125,6 +137,7 @@
   <a class="nav-cta" href="https://open.kakao.com/me/hostjs" target="_blank">문의하기</a>
 </nav>
 
+<!-- HERO -->
 <div class="hero">
   <div class="hero-badge">9년차 결혼식 전문 사회자</div>
   <img class="hero-photo" src="https://i.ibb.co/21VJX3mq/IMG-1713.jpg" alt="사회자 유재성">
@@ -137,13 +150,14 @@
 
 <div class="divider"></div>
 
+<!-- PROFILE -->
 <div class="section">
   <div class="fade-up"><div class="sec-label" style="text-align:center;">사회자 소개</div></div>
   <div class="fade-up"><div class="sec-title" style="text-align:center;">9년, 2,400번의<br>특별한 순간</div></div>
   <div class="fade-up">
     <div class="profile-wrap">
       <img class="profile-img" src="https://i.ibb.co/prrC2FQj/IMG-1710.jpg" alt="유재성 프로필">
-      <div><p class="sec-body" style="text-align:center;">부산·울산·경남을 중심으로 9년간 활동하며 수많은 커플의 가장 특별한 날을 함께했습니다.<br><br>진중하게 분위기를 이끌면서도 적절한 위트로 하객들과 함께<br>웃을 수 있는 식을 만드는 것이 저만의 방식입니다.</p></div>
+      <p class="sec-body">부산·울산·경남을 중심으로 9년간 활동하며 수많은 커플의 가장 특별한 날을 함께했습니다.<br><br>진중하게 분위기를 이끌면서도 적절한 위트로 하객들과 함께<br>웃을 수 있는 식을 만드는 것이 저만의 방식입니다.</p>
     </div>
   </div>
   <div class="fade-up">
@@ -151,13 +165,14 @@
       <div class="stat-card"><div class="stat-num">9년</div><div class="stat-label">결혼식 전문 사회자 경력</div></div>
       <div class="stat-card"><div class="stat-num">2,400+</div><div class="stat-label">행사 진행 건수</div></div>
       <div class="stat-card"><div class="stat-num">부산·울산·경남</div><div class="stat-label">주요 활동 지역</div></div>
-      <div class="stat-card"><div class="stat-num" style="font-size:14px;line-height:1.5;">파트너 사회자</div><div class="stat-label">2026 파라곤 웨딩홀</div></div>
+      <div class="stat-card"><div class="stat-num">파트너 사회자</div><div class="stat-label">2026 파라곤 웨딩홀</div></div>
     </div>
   </div>
 </div>
 
 <div class="divider"></div>
 
+<!-- SERVICES -->
 <div class="section">
   <div class="fade-up"><div class="sec-label">제공 서비스</div></div>
   <div class="fade-up"><div class="sec-title">처음부터 끝까지<br>함께 준비합니다</div></div>
@@ -172,6 +187,7 @@
 
 <div class="divider"></div>
 
+<!-- PRICING -->
 <div class="section">
   <div class="fade-up"><div class="sec-label">2026년 섭외비</div></div>
   <div class="fade-up"><div class="sec-title">출장비 포함,<br>추가 비용 없습니다</div></div>
@@ -190,6 +206,7 @@
 
 <div class="divider"></div>
 
+<!-- EVENT -->
 <div class="section">
   <div class="fade-up"><div class="sec-label">할인 이벤트</div></div>
   <div class="fade-up"><div class="sec-title">2026년 할인 이벤트</div></div>
@@ -197,9 +214,21 @@
     <div class="event-highlight"><p>중복 적용 시</p><strong>최대 17만원 할인 혜택</strong></div>
   </div>
   <div class="events">
-    <div class="event-row fade-up"><div class="event-num">01</div><div style="flex:1;"><div class="event-name">개인문의 고객 한정</div><div class="event-desc">기재된 섭외비에서 추가 할인</div></div><div class="event-discount"><small>할인</small>5만원</div></div>
-    <div class="event-row fade-up"><div class="event-num">02</div><div style="flex:1;"><div class="event-name">짝꿍 할인</div><div class="event-desc">소개자 2만원 & 지인 1만원 할인 (*최대 3명)</div></div><div class="event-discount"><small>최대 할인</small>9만원</div></div>
-    <div class="event-row fade-up"><div class="event-num">03</div><div style="flex:1;"><div class="event-name">리뷰 할인</div><div class="event-desc">웨딩카페 or 블로그 후기 작성시</div></div><div class="event-discount"><small>최대 할인</small>3만원</div></div>
+    <div class="event-row fade-up">
+      <div class="event-num">01</div>
+      <div class="event-info"><div class="event-name">개인문의 고객 한정</div><div class="event-desc">기재된 섭외비에서 추가 할인</div></div>
+      <div class="event-discount"><small>할인</small>5만원</div>
+    </div>
+    <div class="event-row fade-up">
+      <div class="event-num">02</div>
+      <div class="event-info"><div class="event-name">짝꿍 할인</div><div class="event-desc">소개자 2만원 & 지인 1만원 할인 (*최대 3명)</div></div>
+      <div class="event-discount"><small>최대 할인</small>9만원</div>
+    </div>
+    <div class="event-row fade-up">
+      <div class="event-num">03</div>
+      <div class="event-info"><div class="event-name">리뷰 할인</div><div class="event-desc">웨딩카페 or 블로그 후기 작성시</div></div>
+      <div class="event-discount"><small>최대 할인</small>3만원</div>
+    </div>
   </div>
   <p class="event-note fade-up">* 중복할인 가능</p>
 </div>
@@ -237,6 +266,7 @@
 
 <div class="divider"></div>
 
+<!-- STEPS -->
 <div class="section">
   <div class="fade-up"><div class="sec-label">진행 과정</div></div>
   <div class="fade-up"><div class="sec-title">이렇게 함께 준비해요</div></div>
@@ -251,6 +281,7 @@
 
 <div class="divider"></div>
 
+<!-- CONTACT -->
 <div class="section">
   <div class="fade-up"><div class="sec-label">문의하기</div></div>
   <div class="fade-up">
@@ -280,7 +311,9 @@
 <script>
 // ── SCROLL ANIMATION ──
 const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+  });
 }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
@@ -288,7 +321,7 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 const track = document.getElementById('reviewTrack');
 const slides = Array.from(track.querySelectorAll('.review-slide'));
 const dotsWrap = document.getElementById('revDots');
-const imgs = slides.map(s => s.querySelector('img').src);
+const imgUrls = slides.map(s => s.querySelector('img').src);
 const perPage = window.innerWidth <= 480 ? 2 : 4;
 const pageCount = Math.ceil(slides.length / perPage);
 let cur = 0;
@@ -311,14 +344,24 @@ document.getElementById('revPrev').addEventListener('click', () => goTo(cur - 1)
 document.getElementById('revNext').addEventListener('click', () => goTo(cur + 1));
 
 let auto = setInterval(() => goTo(cur + 1), 4000);
-const wrap = document.getElementById('sliderWrap');
-wrap.addEventListener('mouseenter', () => clearInterval(auto));
-wrap.addEventListener('mouseleave', () => { auto = setInterval(() => goTo(cur + 1), 4000); });
+const sliderWrap = document.getElementById('sliderWrap');
+sliderWrap.addEventListener('mouseenter', () => clearInterval(auto));
+sliderWrap.addEventListener('mouseleave', () => { auto = setInterval(() => goTo(cur + 1), 4000); });
 
-// swipe
-let tsx = 0;
-wrap.addEventListener('touchstart', e => { tsx = e.touches[0].clientX; }, { passive: true });
-wrap.addEventListener('touchend', e => { if (Math.abs(e.changedTouches[0].clientX - tsx) > 40) goTo(cur + (e.changedTouches[0].clientX < tsx ? 1 : -1)); });
+// 터치 스와이프
+let tsx = 0, tsy = 0, dragging = false;
+sliderWrap.addEventListener('touchstart', e => {
+  tsx = e.touches[0].clientX;
+  tsy = e.touches[0].clientY;
+  dragging = false;
+}, { passive: true });
+sliderWrap.addEventListener('touchmove', e => {
+  if (Math.abs(e.touches[0].clientX - tsx) > 8) dragging = true;
+}, { passive: true });
+sliderWrap.addEventListener('touchend', e => {
+  const dx = e.changedTouches[0].clientX - tsx;
+  if (dragging && Math.abs(dx) > 40) goTo(cur + (dx < 0 ? 1 : -1));
+});
 
 // ── LIGHTBOX ──
 const lb = document.getElementById('lightbox');
@@ -327,7 +370,7 @@ let lbIdx = 0;
 
 function openLb(idx) {
   lbIdx = idx;
-  lbImg.src = imgs[lbIdx];
+  lbImg.src = imgUrls[lbIdx];
   lb.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
@@ -336,23 +379,25 @@ function closeLb() {
   document.body.style.overflow = '';
 }
 function lbMove(dir) {
-  lbIdx = (lbIdx + dir + imgs.length) % imgs.length;
-  lbImg.src = imgs[lbIdx];
+  lbIdx = (lbIdx + dir + imgUrls.length) % imgUrls.length;
+  lbImg.src = imgUrls[lbIdx];
 }
 
-// 각 이미지에 클릭 이벤트 직접 부착
 slides.forEach((s, i) => {
   const img = s.querySelector('img');
-  img.addEventListener('click', function(e) {
-    e.stopPropagation();
-    openLb(i);
+  let startX = 0, startY = 0;
+  img.addEventListener('pointerdown', e => { startX = e.clientX; startY = e.clientY; });
+  img.addEventListener('pointerup', e => {
+    const dx = Math.abs(e.clientX - startX);
+    const dy = Math.abs(e.clientY - startY);
+    if (dx < 6 && dy < 6) openLb(i);
   });
 });
 
 document.getElementById('lbClose').addEventListener('click', closeLb);
 document.getElementById('lbPrev').addEventListener('click', e => { e.stopPropagation(); lbMove(-1); });
 document.getElementById('lbNext').addEventListener('click', e => { e.stopPropagation(); lbMove(1); });
-lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+lb.addEventListener('click', e => { if (e.target === lb || e.target === lbImg) closeLb(); });
 document.addEventListener('keydown', e => {
   if (!lb.classList.contains('open')) return;
   if (e.key === 'Escape') closeLb();
