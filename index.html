@@ -8,17 +8,14 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #f9fafb; color: #1e2a3a; overflow-x: hidden; }
 
-  /* ANIMATION */
   .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.6s cubic-bezier(.22,.68,0,1.1), transform 0.6s cubic-bezier(.22,.68,0,1.1); }
   .fade-up.visible { opacity: 1; transform: translateY(0); }
 
-  /* NAV */
   nav { position: sticky; top: 0; z-index: 200; background: rgba(255,255,255,0.97); backdrop-filter: blur(10px); border-bottom: 1px solid #e8ecf2; padding: 14px 28px; display: flex; justify-content: space-between; align-items: center; }
   .nav-logo { font-size: 15px; font-weight: 500; color: #1e2a3a; }
   .nav-logo em { font-style: normal; color: #3d5a8a; }
   .nav-cta { background: #3d5a8a; color: #fff; font-size: 13px; font-weight: 500; padding: 8px 20px; border-radius: 999px; text-decoration: none; }
 
-  /* HERO */
   .hero { background: #f0f4f9; padding: 64px 24px 68px; text-align: center; }
   .hero-badge { display: inline-block; background: #dce6f4; color: #3d5a8a; font-size: 12px; font-weight: 500; padding: 5px 16px; border-radius: 999px; margin-bottom: 28px; letter-spacing: 0.05em; }
   .hero-photo { width: 148px; height: 188px; object-fit: cover; object-position: top; border-radius: 74px 74px 20px 20px; margin: 0 auto 28px; display: block; box-shadow: 0 8px 32px rgba(61,90,138,0.13); border: 3px solid #fff; animation: heroIn 0.9s cubic-bezier(.22,.68,0,1.1) both; }
@@ -29,31 +26,26 @@
   .hero-desc { font-size: 14px; color: #6b7a8d; line-height: 1.9; margin-bottom: 36px; word-break: keep-all; }
   .btn-kakao { display: inline-flex; align-items: center; gap: 8px; background: #3d5a8a; color: #fff; font-size: 14px; font-weight: 500; padding: 14px 34px; border-radius: 999px; text-decoration: none; }
 
-  /* SECTIONS */
   .section { padding: 60px 28px; max-width: 700px; margin: 0 auto; }
   .sec-label { font-size: 11px; font-weight: 600; color: #3d5a8a; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 10px; }
   .sec-title { font-size: 22px; font-weight: 500; color: #1e2a3a; margin-bottom: 18px; line-height: 1.45; word-break: keep-all; }
   .sec-body { font-size: 15px; color: #5a6b80; line-height: 1.9; word-break: keep-all; overflow-wrap: break-word; }
   .divider { height: 1px; background: #e8ecf2; margin: 0 28px; }
 
-  /* PROFILE */
   .profile-wrap { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 24px; }
   .profile-img { width: 296px; height: 376px; object-fit: cover; object-position: top; border-radius: 20px; box-shadow: 0 8px 32px rgba(61,90,138,0.13); }
 
-  /* STATS */
   .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 28px; }
   .stat-card { background: #fff; border: 1px solid #e8ecf2; border-radius: 14px; padding: 20px 12px; text-align: center; box-shadow: 0 2px 8px rgba(61,90,138,0.04); }
   .stat-num { font-size: 15px; font-weight: 600; color: #3d5a8a; margin-bottom: 5px; line-height: 1.3; white-space: nowrap; }
   .stat-label { font-size: 12px; color: #8a9ab0; line-height: 1.45; word-break: keep-all; }
 
-  /* SERVICES */
   .services { display: flex; flex-direction: column; gap: 10px; margin-top: 24px; }
   .svc-row { display: flex; align-items: flex-start; gap: 14px; background: #fff; border: 1px solid #e8ecf2; border-radius: 14px; padding: 18px 20px; box-shadow: 0 2px 8px rgba(61,90,138,0.04); }
   .svc-icon { width: 32px; height: 32px; border-radius: 8px; background: #edf2f9; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 15px; }
   .svc-title { font-size: 14px; font-weight: 500; color: #1e2a3a; margin-bottom: 3px; word-break: keep-all; }
   .svc-desc { font-size: 13px; color: #7a8da0; line-height: 1.6; word-break: keep-all; overflow-wrap: break-word; }
 
-  /* PRICING */
   .price-banner { background: #edf2f9; color: #3d5a8a; border-radius: 12px; padding: 13px 20px; text-align: center; font-size: 14px; font-weight: 500; margin-bottom: 18px; border: 1px solid #d0dff0; word-break: keep-all; }
   .price-banner em { color: #2a4470; font-style: normal; font-weight: 600; }
   .price-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 8px rgba(61,90,138,0.04); }
@@ -64,7 +56,6 @@
   .price-table .final { color: #3d5a8a; font-size: 17px; font-weight: 600; text-align: right; white-space: nowrap; }
   .price-note { font-size: 12px; color: #9aaabb; margin-top: 14px; line-height: 1.75; word-break: keep-all; overflow-wrap: break-word; }
 
-  /* EVENT */
   .event-highlight { background: #edf2f9; border: 1px solid #d0dff0; border-radius: 14px; padding: 20px 24px; text-align: center; margin-bottom: 20px; }
   .event-highlight p { font-size: 13px; color: #7a8da0; margin-bottom: 4px; }
   .event-highlight strong { font-size: 22px; color: #3d5a8a; font-weight: 600; }
@@ -78,7 +69,6 @@
   .event-discount small { font-size: 11px; display: block; color: #8a9ab0; font-weight: 400; }
   .event-note { font-size: 12px; color: #9aaabb; margin-top: 10px; word-break: keep-all; }
 
-  /* REVIEW SLIDER */
   .review-slider-wrap { overflow: hidden; margin-top: 24px; }
   .review-track { display: flex; gap: 10px; transition: transform 0.45s cubic-bezier(.4,0,.2,1); }
   .review-slide { flex: 0 0 calc(25% - 8px); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(61,90,138,0.10); }
@@ -90,17 +80,6 @@
   .review-dot { width: 7px; height: 7px; border-radius: 50%; background: #d0dff0; cursor: pointer; transition: background 0.2s, transform 0.2s; border: none; padding: 0; }
   .review-dot.active { background: #3d5a8a; transform: scale(1.3); }
 
-  /* LIGHTBOX */
-  .lightbox { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(5,10,20,0.93); align-items: center; justify-content: center; }
-  .lightbox.open { display: flex; }
-  .lightbox img { max-width: 88vw; max-height: 86vh; border-radius: 12px; object-fit: contain; display: block; box-shadow: 0 8px 60px rgba(0,0,0,0.6); pointer-events: none; }
-  .lb-close { position: fixed; top: 16px; right: 20px; color: #fff; font-size: 36px; cursor: pointer; z-index: 10000; opacity: 0.85; background: none; border: none; line-height: 1; }
-  .lb-arrow { position: fixed; top: 50%; transform: translateY(-50%); color: #fff; font-size: 48px; cursor: pointer; opacity: 0.75; background: none; border: none; z-index: 10000; padding: 0 16px; line-height: 1; }
-  .lb-arrow:hover { opacity: 1; }
-  .lb-prev { left: 0; }
-  .lb-next { right: 0; }
-
-  /* STEPS */
   .steps { display: flex; flex-direction: column; margin-top: 28px; }
   .step { display: flex; gap: 16px; align-items: flex-start; padding-bottom: 24px; }
   .step:last-child { padding-bottom: 0; }
@@ -111,7 +90,22 @@
   .step-title { font-size: 15px; font-weight: 500; color: #1e2a3a; margin-bottom: 3px; margin-top: 6px; word-break: keep-all; }
   .step-desc { font-size: 13px; color: #7a8da0; line-height: 1.65; word-break: keep-all; overflow-wrap: break-word; }
 
-  /* CONTACT */
+  /* CHECKLIST */
+  .checklist-section { max-width: 700px; margin: 0 auto; padding: 0 28px 40px; }
+  .checklist-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .checklist-num { width: 32px; height: 32px; border-radius: 8px; background: #1e2a3a; color: #fff; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .checklist-title { font-size: 17px; font-weight: 500; color: #1e2a3a; }
+  .checklist-slider-wrap { overflow: hidden; }
+  .checklist-track { display: flex; gap: 10px; transition: transform 0.45s cubic-bezier(.4,0,.2,1); }
+  .cl-slide { flex: 0 0 calc(50% - 6px); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(61,90,138,0.10); }
+  .cl-slide img { width: 100%; height: auto; display: block; cursor: zoom-in; -webkit-user-drag: none; user-select: none; }
+  .cl-nav { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 14px; }
+  .cl-nav button { width: 32px; height: 32px; border-radius: 50%; border: 1px solid #d0dff0; background: #fff; color: #3d5a8a; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+  .cl-nav button:hover { background: #edf2f9; }
+  .cl-dots { display: flex; gap: 5px; }
+  .cl-dot { width: 6px; height: 6px; border-radius: 50%; background: #d0dff0; cursor: pointer; transition: background 0.2s, transform 0.2s; border: none; padding: 0; }
+  .cl-dot.active { background: #3d5a8a; transform: scale(1.3); }
+
   .contact-box { background: #3d5a8a; border-radius: 20px; padding: 44px 28px; text-align: center; margin-top: 24px; }
   .contact-box h3 { font-size: 20px; font-weight: 500; color: #fff; margin-bottom: 10px; }
   .contact-box > p { font-size: 14px; color: rgba(255,255,255,0.65); margin-bottom: 28px; line-height: 1.75; word-break: keep-all; }
@@ -120,6 +114,15 @@
   .sns-links { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
   .sns-link { display: inline-flex; align-items: center; gap: 7px; border: 1px solid rgba(255,255,255,0.3); color: rgba(255,255,255,0.85); font-size: 14px; font-weight: 500; padding: 11px 26px; border-radius: 999px; text-decoration: none; background: rgba(255,255,255,0.08); }
 
+  .lightbox { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(5,10,20,0.93); align-items: center; justify-content: center; }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: 88vw; max-height: 86vh; border-radius: 12px; object-fit: contain; display: block; box-shadow: 0 8px 60px rgba(0,0,0,0.6); pointer-events: none; }
+  .lb-close { position: fixed; top: 16px; right: 20px; color: #fff; font-size: 36px; cursor: pointer; z-index: 10000; opacity: 0.85; background: none; border: none; line-height: 1; }
+  .lb-arrow { position: fixed; top: 50%; transform: translateY(-50%); color: #fff; font-size: 48px; cursor: pointer; opacity: 0.75; background: none; border: none; z-index: 10000; padding: 0 16px; line-height: 1; }
+  .lb-arrow:hover { opacity: 1; }
+  .lb-prev { left: 0; }
+  .lb-next { right: 0; }
+
   .footer { text-align: center; padding: 28px 24px; font-size: 12px; color: #9aaabb; background: #fff; border-top: 1px solid #e8ecf2; }
 
   @media (max-width: 480px) {
@@ -127,6 +130,7 @@
     .review-slide { flex: 0 0 calc(50% - 6px); }
     .section { padding: 48px 20px; }
     .profile-img { width: 240px; height: 305px; }
+    .cl-slide { flex: 0 0 100%; }
   }
 </style>
 </head>
@@ -226,10 +230,7 @@
     </div>
     <div class="event-row fade-up">
       <div class="event-num">03</div>
-      <div class="event-info">
-        <div class="event-name">비수기 한정 할인</div>
-        <div class="event-desc">26년 7월 19일 ~ 8월 16일<br>27년 7월 17일 ~ 8월 15일</div>
-      </div>
+      <div class="event-info"><div class="event-name">비수기 한정 할인</div><div class="event-desc">26년 7월 19일 ~ 8월 16일<br>27년 7월 17일 ~ 8월 15일</div></div>
       <div class="event-discount"><small>할인</small>3만원</div>
     </div>
   </div>
@@ -292,6 +293,115 @@
 
 <div class="divider"></div>
 
+<!-- CHECKLIST -->
+<div class="section">
+  <div class="fade-up"><div class="sec-label">결혼 준비 가이드</div></div>
+  <div class="fade-up"><div class="sec-title">결혼 준비,<br>이렇게 시작하세요</div></div>
+</div>
+
+<!-- 1. 결혼준비 타임라인 -->
+<div class="checklist-section fade-up">
+  <div class="checklist-header"><span class="checklist-num">01</span><span class="checklist-title">결혼준비 타임라인</span></div>
+  <div class="checklist-slider-wrap">
+    <div class="checklist-track" id="cl-track-1">
+      <div class="cl-slide"><img src="https://i.ibb.co/gMD7tjJD/slide-01.png" alt="타임라인 01"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/zWnMz5h3/slide-02.png" alt="타임라인 02"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/b5d7H3Kn/slide-03.png" alt="타임라인 03"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/Tx295RGs/slide-04.png" alt="타임라인 04"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/VYwTXh8D/slide-05.png" alt="타임라인 05"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/jvbtpwGw/slide-06.png" alt="타임라인 06"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/p6HTW2Tb/slide-07.png" alt="타임라인 07"></div>
+    </div>
+    <div class="cl-nav"><button class="cl-prev" data-id="1">‹</button><div class="cl-dots" id="cl-dots-1"></div><button class="cl-next" data-id="1">›</button></div>
+  </div>
+</div>
+
+<!-- 2. 웨딩홀 투어 체크리스트 -->
+<div class="checklist-section fade-up">
+  <div class="checklist-header"><span class="checklist-num">02</span><span class="checklist-title">웨딩홀 투어 체크리스트</span></div>
+  <div class="checklist-slider-wrap">
+    <div class="checklist-track" id="cl-track-2">
+      <div class="cl-slide"><img src="https://i.ibb.co/d07NpBBH/slide-01-1.png" alt="웨딩홀 01"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/WvVn4Kzp/slide-02-1.png" alt="웨딩홀 02"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/jkXV1Dzv/slide-03-1.png" alt="웨딩홀 03"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/6LHCf3Z/slide-04-1.png" alt="웨딩홀 04"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/C5Skyx7f/slide-05-1.png" alt="웨딩홀 05"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/0jn9RXG5/slide-06-1.png" alt="웨딩홀 06"></div>
+    </div>
+    <div class="cl-nav"><button class="cl-prev" data-id="2">‹</button><div class="cl-dots" id="cl-dots-2"></div><button class="cl-next" data-id="2">›</button></div>
+  </div>
+</div>
+
+<!-- 3. 결혼식 사회자 섭외 체크리스트 -->
+<div class="checklist-section fade-up">
+  <div class="checklist-header"><span class="checklist-num">03</span><span class="checklist-title">결혼식 사회자 섭외 체크리스트</span></div>
+  <div class="checklist-slider-wrap">
+    <div class="checklist-track" id="cl-track-3">
+      <div class="cl-slide"><img src="https://i.ibb.co/HpnsBxyR/slide-01.png" alt="섭외 01"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/fzFdx0NL/slide-02.png" alt="섭외 02"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/Y7zksgTR/slide-03.png" alt="섭외 03"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/Vp0Wrx4S/slide-04.png" alt="섭외 04"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/3mdXCy4k/slide-05.png" alt="섭외 05"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/mVKnMRHS/slide-06.png" alt="섭외 06"></div>
+    </div>
+    <div class="cl-nav"><button class="cl-prev" data-id="3">‹</button><div class="cl-dots" id="cl-dots-3"></div><button class="cl-next" data-id="3">›</button></div>
+  </div>
+</div>
+
+<!-- 4. 본식 전 체크리스트 -->
+<div class="checklist-section fade-up">
+  <div class="checklist-header"><span class="checklist-num">04</span><span class="checklist-title">본식 전 체크리스트</span></div>
+  <div class="checklist-slider-wrap">
+    <div class="checklist-track" id="cl-track-4">
+      <div class="cl-slide"><img src="https://i.ibb.co/0pdxzyb9/slide-01.png" alt="본식전 01"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/hRrjsFn0/slide-02.png" alt="본식전 02"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/yFtQ7kbJ/slide-03.png" alt="본식전 03"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/KxrpkrfJ/slide-04.png" alt="본식전 04"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/1tZDzNmJ/slide-05.png" alt="본식전 05"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/CKNF3389/slide-06.png" alt="본식전 06"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/zWrLWWWG/slide-07.png" alt="본식전 07"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/7dt28LnP/slide-08.png" alt="본식전 08"></div>
+    </div>
+    <div class="cl-nav"><button class="cl-prev" data-id="4">‹</button><div class="cl-dots" id="cl-dots-4"></div><button class="cl-next" data-id="4">›</button></div>
+  </div>
+</div>
+
+<!-- 5. 본식 필수 체크리스트 -->
+<div class="checklist-section fade-up">
+  <div class="checklist-header"><span class="checklist-num">05</span><span class="checklist-title">본식 필수 체크리스트</span></div>
+  <div class="checklist-slider-wrap">
+    <div class="checklist-track" id="cl-track-5">
+      <div class="cl-slide"><img src="https://i.ibb.co/1NKcFgs/slide-01.png" alt="본식 01"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/CKgFTX6t/slide-02.png" alt="본식 02"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/LDLZzgZH/slide-03.png" alt="본식 03"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/zT4GSwFS/slide-04.png" alt="본식 04"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/gbB8TFyj/slide-05.png" alt="본식 05"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/qLXZJh2n/slide-06.png" alt="본식 06"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/b5xXz4Xx/slide-07.png" alt="본식 07"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/qL9DgngW/slide-08.png" alt="본식 08"></div>
+    </div>
+    <div class="cl-nav"><button class="cl-prev" data-id="5">‹</button><div class="cl-dots" id="cl-dots-5"></div><button class="cl-next" data-id="5">›</button></div>
+  </div>
+</div>
+
+<!-- 6. 피로연 에티켓 -->
+<div class="checklist-section fade-up" style="margin-bottom:0;">
+  <div class="checklist-header"><span class="checklist-num">06</span><span class="checklist-title">피로연 에티켓</span></div>
+  <div class="checklist-slider-wrap">
+    <div class="checklist-track" id="cl-track-6">
+      <div class="cl-slide"><img src="https://i.ibb.co/3YPhSJs0/slide-01.png" alt="피로연 01"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/jkztYNkH/slide-02.png" alt="피로연 02"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/27xWK2xY/slide-03.png" alt="피로연 03"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/67k7pv75/slide-04.png" alt="피로연 04"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/60N56Dbw/slide-05.png" alt="피로연 05"></div>
+      <div class="cl-slide"><img src="https://i.ibb.co/Mx52Fc05/slide-06.png" alt="피로연 06"></div>
+    </div>
+    <div class="cl-nav"><button class="cl-prev" data-id="6">‹</button><div class="cl-dots" id="cl-dots-6"></div><button class="cl-next" data-id="6">›</button></div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
 <!-- CONTACT -->
 <div class="section">
   <div class="fade-up"><div class="sec-label">문의하기</div></div>
@@ -315,20 +425,18 @@
 <div id="lightbox" class="lightbox">
   <button class="lb-close" id="lbClose">✕</button>
   <button class="lb-arrow lb-prev" id="lbPrev">‹</button>
-  <img id="lbImg" src="" alt="후기 확대">
+  <img id="lbImg" src="" alt="확대 이미지">
   <button class="lb-arrow lb-next" id="lbNext">›</button>
 </div>
 
 <script>
-// ── SCROLL ANIMATION ──
+// SCROLL ANIMATION
 const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
-  });
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
 }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-// ── SLIDER ──
+// REVIEW SLIDER
 const track = document.getElementById('reviewTrack');
 const slides = Array.from(track.querySelectorAll('.review-slide'));
 const dotsWrap = document.getElementById('revDots');
@@ -343,92 +451,87 @@ for (let i = 0; i < pageCount; i++) {
   d.addEventListener('click', () => goTo(i));
   dotsWrap.appendChild(d);
 }
-
 function goTo(idx) {
   cur = (idx + pageCount) % pageCount;
   const sw = slides[0].offsetWidth + 10;
   track.style.transform = `translateX(-${cur * perPage * sw}px)`;
   dotsWrap.querySelectorAll('.review-dot').forEach((d, i) => d.classList.toggle('active', i === cur));
 }
-
 document.getElementById('revPrev').addEventListener('click', () => goTo(cur - 1));
 document.getElementById('revNext').addEventListener('click', () => goTo(cur + 1));
-
 let auto = setInterval(() => goTo(cur + 1), 4000);
 const sliderWrap = document.getElementById('sliderWrap');
 sliderWrap.addEventListener('mouseenter', () => clearInterval(auto));
 sliderWrap.addEventListener('mouseleave', () => { auto = setInterval(() => goTo(cur + 1), 4000); });
+let tsx = 0, dragging = false;
+sliderWrap.addEventListener('touchstart', e => { tsx = e.touches[0].clientX; dragging = false; }, { passive: true });
+sliderWrap.addEventListener('touchmove', e => { if (Math.abs(e.touches[0].clientX - tsx) > 8) dragging = true; }, { passive: true });
+sliderWrap.addEventListener('touchend', e => { const dx = e.changedTouches[0].clientX - tsx; if (dragging && Math.abs(dx) > 40) goTo(cur + (dx < 0 ? 1 : -1)); });
 
-// 터치 스와이프
-let tsx = 0, tsy = 0, dragging = false;
-sliderWrap.addEventListener('touchstart', e => {
-  tsx = e.touches[0].clientX;
-  tsy = e.touches[0].clientY;
-  dragging = false;
-}, { passive: true });
-sliderWrap.addEventListener('touchmove', e => {
-  if (Math.abs(e.touches[0].clientX - tsx) > 8) dragging = true;
-}, { passive: true });
-sliderWrap.addEventListener('touchend', e => {
-  const dx = e.changedTouches[0].clientX - tsx;
-  if (dragging && Math.abs(dx) > 40) goTo(cur + (dx < 0 ? 1 : -1));
-});
-
-// ── LIGHTBOX ──
+// LIGHTBOX
 const lb = document.getElementById('lightbox');
 const lbImg = document.getElementById('lbImg');
 let lbIdx = 0;
+let lbImgList = imgUrls;
 
-function openLb(idx) {
-  lbIdx = idx;
-  lbImg.src = imgUrls[lbIdx];
-  lb.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closeLb() {
-  lb.classList.remove('open');
-  document.body.style.overflow = '';
-}
-function lbMove(dir) {
-  lbIdx = (lbIdx + dir + imgUrls.length) % imgUrls.length;
-  lbImg.src = imgUrls[lbIdx];
-}
+function openLb(idx) { lbIdx = idx; lbImg.src = lbImgList[lbIdx]; lb.classList.add('open'); document.body.style.overflow = 'hidden'; }
+function closeLb() { lb.classList.remove('open'); document.body.style.overflow = ''; }
+function lbMove(dir) { lbIdx = (lbIdx + dir + lbImgList.length) % lbImgList.length; lbImg.src = lbImgList[lbIdx]; }
 
 slides.forEach((s, i) => {
   const img = s.querySelector('img');
-  let startX = 0, startY = 0;
-
-  // 마우스 클릭 (PC)
-  img.addEventListener('mousedown', e => { startX = e.clientX; startY = e.clientY; });
-  img.addEventListener('mouseup', e => {
-    if (Math.abs(e.clientX - startX) < 6 && Math.abs(e.clientY - startY) < 6) openLb(i);
-  });
-
-  // 터치 (모바일)
-  img.addEventListener('touchstart', e => {
-    startX = e.touches[0].clientX;
-    startY = e.touches[0].clientY;
-  }, { passive: true });
-  img.addEventListener('touchend', e => {
-    const dx = Math.abs(e.changedTouches[0].clientX - startX);
-    const dy = Math.abs(e.changedTouches[0].clientY - startY);
-    if (dx < 10 && dy < 10) {
-      e.preventDefault();
-      openLb(i);
-    }
-  });
+  let sx = 0, sy = 0;
+  img.addEventListener('mousedown', e => { sx = e.clientX; sy = e.clientY; });
+  img.addEventListener('mouseup', e => { if (Math.abs(e.clientX-sx)<6 && Math.abs(e.clientY-sy)<6) { lbImgList = imgUrls; openLb(i); } });
+  img.addEventListener('touchstart', e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
+  img.addEventListener('touchend', e => { const dx=Math.abs(e.changedTouches[0].clientX-sx), dy=Math.abs(e.changedTouches[0].clientY-sy); if(dx<10&&dy<10){e.preventDefault(); lbImgList=imgUrls; openLb(i);} });
 });
 
 document.getElementById('lbClose').addEventListener('click', closeLb);
 document.getElementById('lbPrev').addEventListener('click', e => { e.stopPropagation(); lbMove(-1); });
 document.getElementById('lbNext').addEventListener('click', e => { e.stopPropagation(); lbMove(1); });
 lb.addEventListener('click', e => { if (e.target === lb || e.target === lbImg) closeLb(); });
-document.addEventListener('keydown', e => {
-  if (!lb.classList.contains('open')) return;
-  if (e.key === 'Escape') closeLb();
-  if (e.key === 'ArrowLeft') lbMove(-1);
-  if (e.key === 'ArrowRight') lbMove(1);
-});
+document.addEventListener('keydown', e => { if (!lb.classList.contains('open')) return; if (e.key==='Escape') closeLb(); if (e.key==='ArrowLeft') lbMove(-1); if (e.key==='ArrowRight') lbMove(1); });
+
+// CHECKLIST SLIDERS
+function initClSlider(id) {
+  const track = document.getElementById(`cl-track-${id}`);
+  const dotsWrap = document.getElementById(`cl-dots-${id}`);
+  if (!track) return;
+  const slides = Array.from(track.querySelectorAll('.cl-slide'));
+  if (!slides.length) return;
+  const perPage = window.innerWidth <= 480 ? 1 : 2;
+  const pageCount = Math.ceil(slides.length / perPage);
+  let cur = 0;
+  dotsWrap.innerHTML = '';
+  for (let i = 0; i < pageCount; i++) {
+    const d = document.createElement('button');
+    d.className = 'cl-dot' + (i === 0 ? ' active' : '');
+    d.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(d);
+  }
+  function goTo(idx) {
+    cur = (idx + pageCount) % pageCount;
+    const sw = slides[0].offsetWidth + 10;
+    track.style.transform = `translateX(-${cur * perPage * sw}px)`;
+    dotsWrap.querySelectorAll('.cl-dot').forEach((d, i) => d.classList.toggle('active', i === cur));
+  }
+  document.querySelectorAll(`.cl-prev[data-id="${id}"]`).forEach(btn => btn.addEventListener('click', () => goTo(cur - 1)));
+  document.querySelectorAll(`.cl-next[data-id="${id}"]`).forEach(btn => btn.addEventListener('click', () => goTo(cur + 1)));
+  let tsx = 0;
+  track.addEventListener('touchstart', e => { tsx = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', e => { const dx = e.changedTouches[0].clientX - tsx; if (Math.abs(dx) > 40) goTo(cur + (dx < 0 ? 1 : -1)); });
+  slides.forEach((s, i) => {
+    const img = s.querySelector('img');
+    if (!img) return;
+    let sx = 0, sy = 0;
+    img.addEventListener('mousedown', e => { sx = e.clientX; sy = e.clientY; });
+    img.addEventListener('mouseup', e => { if (Math.abs(e.clientX-sx)<6 && Math.abs(e.clientY-sy)<6) { lbImgList = Array.from(track.querySelectorAll('img')).map(im=>im.src); openLb(i); } });
+    img.addEventListener('touchstart', e => { sx=e.touches[0].clientX; sy=e.touches[0].clientY; }, { passive: true });
+    img.addEventListener('touchend', e => { const dx=Math.abs(e.changedTouches[0].clientX-sx),dy=Math.abs(e.changedTouches[0].clientY-sy); if(dx<10&&dy<10){e.preventDefault(); lbImgList=Array.from(track.querySelectorAll('img')).map(im=>im.src); openLb(i);} });
+  });
+}
+for (let i = 1; i <= 6; i++) initClSlider(i);
 </script>
 </body>
 </html>
