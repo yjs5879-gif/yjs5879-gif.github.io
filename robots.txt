@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://yjs5879-gif.github.io/sitemap.xml
+Sitemap: https://wedding-mc.co.kr/sitemap.xml
