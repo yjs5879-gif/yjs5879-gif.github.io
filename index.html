@@ -126,12 +126,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* ── 가격 ── */
   .price-banner { background: #f0ece7; color: #8b7355; border-radius: 12px; padding: 13px 20px; text-align: center; font-size: 14px; font-weight: 500; margin-bottom: 18px; border: 1px solid #d8cfc6; word-break: keep-all; }
   .price-banner em { color: #6b5540; font-style: normal; font-weight: 600; }
-  .price-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 8px rgba(139,115,85,0.04); }
-  .price-table tr { border-bottom: 1px solid #e8e2db; }
-  .price-table tr:last-child { border-bottom: none; }
-  .price-table td { padding: 15px 20px; font-size: 14px; color: #2c2420; vertical-align: middle; word-break: keep-all; }
-  .price-table .region { font-weight: 500; color: #3a3028; }
-  .price-table .final { color: #8b7355; font-size: 17px; font-weight: 600; text-align: right; white-space: nowrap; }
+  .price-list { display: flex; flex-direction: column; gap: 8px; }
+  .price-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: #fff; border: 1px solid #e8e2db; border-radius: 14px; padding: 16px 20px; box-shadow: 0 2px 8px rgba(139,115,85,0.04); }
+  .price-row.extra { background: #f0ece7; border-color: #d8cfc6; }
+  .price-region { font-size: 14px; font-weight: 500; color: #2c2420; word-break: keep-all; }
+  .price-row.extra .price-region { color: #8b7355; }
+  .price-amount { font-size: 16px; font-weight: 600; color: #8b7355; white-space: nowrap; flex-shrink: 0; }
+  .price-row.extra .price-amount { font-size: 14px; color: #a08060; }
   .price-note { font-size: 12px; color: #a09488; margin-top: 14px; line-height: 1.75; word-break: keep-all; overflow-wrap: break-word; }
 
   /* ── 할인 이벤트 ── */
@@ -426,15 +427,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="section">
   <div class="fade-up"><div class="sec-label">2026년 섭외비</div></div>
   <div class="fade-up"><div class="sec-title">출장비 포함,<br>추가 비용 없습니다</div></div>
-  <div class="fade-up"><div class="price-banner">개인 문의시 아래 금액에서 <em>5만원 추가 할인</em></div></div>
   <div class="fade-up">
-    <table class="price-table">
-      <tr><td class="region">부산 (기장 제외)</td><td class="final">350,000원</td></tr>
-      <tr><td class="region">기장, 김해, 양산</td><td class="final">400,000원</td></tr>
-      <tr><td class="region">창원, 울산, 밀양</td><td class="final">450,000원</td></tr>
-      <tr><td class="region">대구, 진주, 경주, 거제</td><td class="final">500,000원</td></tr>
-      <tr><td class="region">2부 예식 진행시 추가금</td><td class="final">150,000원</td></tr>
-    </table>
+    <div class="price-list">
+      <div class="price-row"><span class="price-region">부산 (기장 제외)</span><span class="price-amount">350,000원</span></div>
+      <div class="price-row"><span class="price-region">기장, 김해, 양산</span><span class="price-amount">400,000원</span></div>
+      <div class="price-row"><span class="price-region">창원, 울산, 밀양</span><span class="price-amount">450,000원</span></div>
+      <div class="price-row"><span class="price-region">대구, 진주, 경주, 거제</span><span class="price-amount">500,000원</span></div>
+      <div class="price-row extra"><span class="price-region">2부 예식 진행시 추가금</span><span class="price-amount">+ 150,000원</span></div>
+    </div>
     <p class="price-note">* 위 금액은 출장비 포함 금액이며 이외 추가금은 없습니다.<br>* 이 외 지역은 문의주시면 친절히 안내드리겠습니다.</p>
   </div>
 </div>
